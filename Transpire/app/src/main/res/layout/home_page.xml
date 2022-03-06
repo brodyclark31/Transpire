@@ -95,10 +95,16 @@
             android:textSize="24sp" />
     </LinearLayout>
 
+    <!-- filler -->
+    <TextView android:layout_height="1dip"
+        android:layout_width="fill_parent"
+        android:layout_weight="2" />
+
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center_horizontal"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="bottom"
         android:orientation="horizontal">
 
         <Button
@@ -109,6 +115,8 @@
             android:layout_gravity="center_horizontal"
             android:text="LOCATION INFO?"
             android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:lines="1"
             android:textSize="24sp" />
         <Button
             android:id="@+id/history_nav"
@@ -117,8 +125,9 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:text="HISTORY"
+            android:lines="1"
             android:textColor="@color/black"
-            android:textSize="24sp" />
+            android:autoSizeTextType="uniform" />
         <Button
             android:id="@+id/setting_nav"
             android:layout_width="0dp"
@@ -126,8 +135,9 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:text="SETTING"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
+            android:autoSizeTextType="uniform"
+            android:lines="1"
+            android:textColor="@color/black" />
     </LinearLayout>
 
 
