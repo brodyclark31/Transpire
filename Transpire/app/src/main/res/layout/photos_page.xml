@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="PHOTOS"
+            android:text="@string/photos"
             android:textColor="@color/black"
             android:textSize="50sp" />
     </LinearLayout>
@@ -28,7 +28,7 @@
         android:layout_weight="5"
         android:gravity="center"
         android:autoSizeTextType="uniform"
-        android:text="Photos and stuff need to go here"/>
+        android:text="@string/photos_fill_text"/>
 
 
     <LinearLayout
@@ -45,7 +45,7 @@
             >
 
             <TextView
-                android:text="Post Photo"
+                android:text="@string/post_photo"
                 android:autoSizeTextType="uniform"
                 android:textStyle="bold"
                 android:layout_height="fill_parent"
@@ -63,7 +63,7 @@
             >
 
             <TextView
-                android:text="Post Comment"
+                android:text="@string/post_comment"
                 android:autoSizeTextType="uniform"
                 android:textStyle="bold"
                 android:layout_height="fill_parent"
