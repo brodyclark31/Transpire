@@ -85,4 +85,9 @@
     <string name="setting">Setting</string>
     <string name="history">History</string>
 
+    <string name="photos">Photos</string>
+    <string name="photos_fill_text">Photos and stuff need to go here</string>
+    <string name="post_photo">Post Photo</string>
+    <string name="post_comment">Post Comment</string>
+
 </resources>
