@@ -115,6 +115,8 @@
             android:layout_gravity="center_horizontal"
             android:text="LOCATION INFO?"
             android:textColor="@color/black"
+            android:autoSizeTextType="uniform"
+            android:lines="1"
             android:textSize="24sp" />
         <Button
             android:id="@+id/history_nav"
@@ -123,8 +125,9 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:text="HISTORY"
+            android:lines="1"
             android:textColor="@color/black"
-            android:textSize="24sp" />
+            android:autoSizeTextType="uniform" />
         <Button
             android:id="@+id/setting_nav"
             android:layout_width="0dp"
@@ -132,8 +135,9 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:text="SETTING"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
+            android:autoSizeTextType="uniform"
+            android:lines="1"
+            android:textColor="@color/black" />
     </LinearLayout>
 
 
