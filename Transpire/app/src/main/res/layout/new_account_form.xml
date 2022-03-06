@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
         android:textSize="24sp"
-        android:text="New Account Form"/>
+        android:text="@string/new_account_form"/>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|center_horizontal"
             android:textSize="20sp"
-            android:text="First Name:"/>
+            android:text="@string/first_name"/>
 
         <EditText
             android:layout_width="0dp"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|center_horizontal"
             android:textSize="20sp"
-            android:text="Last Name:"/>
+            android:text="@string/last_name"/>
 
         <EditText
             android:layout_width="0dp"
@@ -58,7 +58,7 @@
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_weight="0.1"
             android:textSize="20sp"
-            android:text="Age:"/>
+            android:text="@string/age"/>
 
         <EditText
             android:layout_width="0dp"
@@ -72,7 +72,7 @@
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_weight="0.2"
             android:textSize="20sp"
-            android:text="Gender:"/>
+            android:text="@string/gender"/>
 
         <RadioGroup
             android:layout_width="0dp"
@@ -83,12 +83,12 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="M"/>
+                android:text="@string/male"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="F"/>
+                android:text="@string/female"/>
 
         </RadioGroup>
 
@@ -103,7 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|center_horizontal"
             android:textSize="20sp"
-            android:text="City:"/>
+            android:text="@string/city"/>
 
         <EditText
             android:layout_width="0dp"
@@ -121,12 +121,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|center_horizontal"
             android:textSize="20sp"
-            android:text="State:"/>
+            android:text="@string/state"/>
 
         <Spinner
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.75"/>
+            android:layout_weight="0.75"
+            android:entries="@array/states"/>
 
     </LinearLayout>
 
@@ -139,20 +140,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|center_horizontal"
-            android:inputType="numberDecimal"
             android:textSize="20sp"
-            android:text="Travel Distance:"/>
+            android:text="@string/travel_distance"/>
 
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
             android:layout_weight="0.52"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.1"
-            android:text="miles"/>
+            android:text="@string/miles"/>
 
     </LinearLayout>
 
@@ -161,9 +162,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
-        android:inputType="numberDecimal"
         android:textSize="20sp"
-        android:text="Submit"/>
+        android:text="@string/submit"/>
 
 
 

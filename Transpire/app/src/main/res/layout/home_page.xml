@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="HOMEPAGE"
+            android:text="@string/home_page"
             android:textColor="@color/black"
             android:textSize="50sp" />
     </LinearLayout>
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="{LOCATION}"
+            android:text="@string/location"
             android:textColor="@color/black"
             android:textSize="24sp" />
 
@@ -73,7 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="DIRECTIONS?"
+            android:text="@string/direction"
             android:textColor="@color/black"
             android:textSize="24sp" />
     </LinearLayout>
@@ -90,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="RIDES?"
+            android:text="@string/rides"
             android:textColor="@color/black"
             android:textSize="24sp" />
     </LinearLayout>
@@ -113,7 +113,7 @@
             android:layout_weight=".33"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:text="LOCATION INFO?"
+            android:text="@string/location_info"
             android:textColor="@color/black"
             android:autoSizeTextType="uniform"
             android:lines="1"
@@ -124,7 +124,7 @@
             android:layout_weight=".33"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:text="HISTORY"
+            android:text="@string/history"
             android:lines="1"
             android:textColor="@color/black"
             android:autoSizeTextType="uniform" />
@@ -134,7 +134,7 @@
             android:layout_weight=".33"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:text="SETTING"
+            android:text="@string/setting"
             android:autoSizeTextType="uniform"
             android:lines="1"
             android:textColor="@color/black" />
