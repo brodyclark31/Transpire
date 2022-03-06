@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/loginPage"
-        android:name="com.brodyclark_l2.transpire.ui.LoginPage"
+        android:name="com.brodyclark_l2.transpire.ui.LoginPageFragment"
         android:label="LoginPage" />
 </navigation>
