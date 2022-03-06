@@ -9,5 +9,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
         android:textSize="24sp"
-        android:text="MAPS"/>
+        android:text="@string/map"/>
 </LinearLayout>

@@ -73,7 +73,7 @@
     </string-array>
 
     <string name="uber">Uber</string>
-    <string name="map">Map</string>
+    <string name="map">Maps</string>
 
     <string name="home_page">Home Page</string>
     <string name="location">{Location}</string>
