@@ -101,43 +101,60 @@
         android:layout_weight="2" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/location_nav"
+        <FrameLayout
             android:layout_width="0dp"
-            android:layout_weight=".33"
             android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:text="LOCATION INFO?"
-            android:textColor="@color/black"
-            android:autoSizeTextType="uniform"
-            android:lines="1"
-            android:textSize="24sp" />
-        <Button
-            android:id="@+id/history_nav"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/location_nav"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:text="LOCATION INFO?"
+                android:textColor="@color/black"
+                android:autoSizeTextType="uniform"
+                android:lines="1"
+                android:textSize="24sp" />
+        </FrameLayout>
+
+        <FrameLayout
             android:layout_width="0dp"
-            android:layout_weight=".33"
             android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:text="HISTORY"
-            android:lines="1"
-            android:textColor="@color/black"
-            android:autoSizeTextType="uniform" />
-        <Button
-            android:id="@+id/setting_nav"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/history_nav"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:text="HISTORY"
+                android:lines="1"
+                android:textColor="@color/black"
+                android:autoSizeTextType="uniform" />
+
+        </FrameLayout>
+
+        <FrameLayout
             android:layout_width="0dp"
-            android:layout_weight=".33"
             android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:text="SETTING"
-            android:autoSizeTextType="uniform"
-            android:lines="1"
-            android:textColor="@color/black" />
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/setting_nav"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:text="SETTING"
+                android:autoSizeTextType="uniform"
+                android:lines="1"
+                android:textColor="@color/black" />
+
+        </FrameLayout>
+
     </LinearLayout>
 
 
