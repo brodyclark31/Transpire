@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/loginPage">
 
     <fragment
         android:id="@+id/loginPage"
         android:name="com.brodyclark_l2.transpire.ui.LoginPageFragment"
-        android:label="LoginPage" />
+        android:label="LoginPage" >
+        <action
+            android:id="@+id/action_loginPage_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.brodyclark_l2.transpire.ui.HomePageFragment"
+        android:label="HomePageFragment" />
 </navigation>
