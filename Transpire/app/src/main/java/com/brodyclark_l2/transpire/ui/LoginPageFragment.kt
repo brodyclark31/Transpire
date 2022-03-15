@@ -22,8 +22,15 @@ class LoginPageFragment: Fragment() {
         _binding = LoginPageBinding.inflate(inflater, container, false)
         val loginButton = binding.loginButton
         loginButton.setOnClickListener {
-            Log.d("hi", "hi")
-            val action = LoginPageFragmentDirections.actionLoginPageToHomePageFragment()
+            val action = LoginPageFragmentDirections
+                .actionLoginPageToHomePageFragment()
+            view?.findNavController()
+                ?.navigate(action)
+        }
+        val createAccountButton = binding.createAccountButton
+        createAccountButton.setOnClickListener {
+            val action = LoginPageFragmentDirections
+                .actionLoginPageToNewAccountFormFragment()
             view?.findNavController()
                 ?.navigate(action)
         }

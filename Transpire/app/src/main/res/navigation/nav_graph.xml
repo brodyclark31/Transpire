@@ -12,9 +12,20 @@
         <action
             android:id="@+id/action_loginPage_to_homePageFragment"
             app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/action_loginPage_to_newAccountFormFragment"
+            app:destination="@id/newAccountFormFragment" />
     </fragment>
     <fragment
         android:id="@+id/homePageFragment"
         android:name="com.brodyclark_l2.transpire.ui.HomePageFragment"
         android:label="HomePageFragment" />
+    <fragment
+        android:id="@+id/newAccountFormFragment"
+        android:name="com.brodyclark_l2.transpire.ui.NewAccountFormFragment"
+        android:label="NewAccountFormFragment" >
+        <action
+            android:id="@+id/action_newAccountFormFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
 </navigation>
