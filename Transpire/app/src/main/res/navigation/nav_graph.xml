@@ -19,13 +19,53 @@
     <fragment
         android:id="@+id/homePageFragment"
         android:name="com.brodyclark_l2.transpire.ui.HomePageFragment"
-        android:label="HomePageFragment" />
+        android:label="HomePageFragment" >
+        <action
+            android:id="@+id/action_homePageFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_uberFragment"
+            app:destination="@id/uberFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_locationDetailsFragment"
+            app:destination="@id/locationDetailsFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_photosFragment"
+            app:destination="@id/photosFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_updateAccountFormFragment"
+            app:destination="@id/updateAccountFormFragment" />
+    </fragment>
     <fragment
         android:id="@+id/newAccountFormFragment"
         android:name="com.brodyclark_l2.transpire.ui.NewAccountFormFragment"
         android:label="NewAccountFormFragment" >
         <action
             android:id="@+id/action_newAccountFormFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.brodyclark_l2.transpire.ui.MapsFragment"
+        android:label="MapsFragment" />
+    <fragment
+        android:id="@+id/uberFragment"
+        android:name="com.brodyclark_l2.transpire.ui.UberFragment"
+        android:label="UberFragment" />
+    <fragment
+        android:id="@+id/locationDetailsFragment"
+        android:name="com.brodyclark_l2.transpire.ui.LocationDetailsFragment"
+        android:label="LocationDetailsFragment" />
+    <fragment
+        android:id="@+id/photosFragment"
+        android:name="com.brodyclark_l2.transpire.ui.PhotosFragment"
+        android:label="PhotosFragment" />
+    <fragment
+        android:id="@+id/updateAccountFormFragment"
+        android:name="com.brodyclark_l2.transpire.ui.UpdateAccountFormFragment"
+        android:label="UpdateAccountFormFragment" >
+        <action
+            android:id="@+id/action_updateAccountFormFragment_to_homePageFragment"
             app:destination="@id/homePageFragment" />
     </fragment>
 </navigation>

@@ -6,8 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.brodyclark_l2.transpire.databinding.HomePageBinding
-import com.brodyclark_l2.transpire.databinding.LoginPageBinding
 import com.brodyclark_l2.transpire.databinding.NewAccountFormBinding
 
 
