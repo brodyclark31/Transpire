@@ -41,10 +41,10 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:background="@color/purple_200"
             >
 
-            <TextView
+            <Button
+                android:id="@+id/post_photo_button"
                 android:text="@string/post_photo"
                 android:autoSizeTextType="uniform"
                 android:textStyle="bold"
@@ -59,10 +59,10 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:background="@color/purple_200"
             >
 
-            <TextView
+            <Button
+                android:id="@+id/post_comment_button"
                 android:text="@string/post_comment"
                 android:autoSizeTextType="uniform"
                 android:textStyle="bold"

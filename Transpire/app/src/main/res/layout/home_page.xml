@@ -40,25 +40,25 @@
             android:textColor="@color/black"
             android:textSize="24sp" />
 
-        <CheckBox
-            android:id="@+id/check_yes"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="8dp"
-            android:backgroundTint="@color/black"
-            android:textColor="@color/white"
-            android:textSize="12sp" />
+            android:orientation="horizontal"
+            android:layout_weight="0.3">
 
-        <CheckBox
-            android:id="@+id/check_no"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="8dp"
-            android:backgroundTint="@color/black"
-            android:textColor="@color/white"
-            android:textSize="12sp" />
+            <RadioButton
+                android:id="@+id/check_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yes"/>
+
+            <RadioButton
+                android:id="@+id/check_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"/>
+
+        </RadioGroup>
     </LinearLayout>
 
     <!--    new user-->
