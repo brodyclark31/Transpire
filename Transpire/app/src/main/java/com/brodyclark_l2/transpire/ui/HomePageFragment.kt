@@ -29,9 +29,10 @@ class HomePageFragment: Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-
         _binding = HomePageBinding.inflate(inflater, container, false)
+
+        setBarTextViewModel()
+
         val directionsButton = binding.directionsButton
         directionsButton.setOnClickListener {
             val action = HomePageFragmentDirections
