@@ -12,7 +12,7 @@ import com.brodyclark_l2.transpire.data.MeetingLocation
 @TypeConverters(UserData::class, MeetingLocation::class)
 abstract class TranspireDatabase : RoomDatabase() {
     abstract val userdataDao : UserDao
-    abstract val locationDao : LocationDao
+    abstract val meetingLocationDao : MeetingLocationDao
     companion object {
         @Volatile private var INSTANCE: TranspireDatabase? = null
         fun getInstance(context: Context): TranspireDatabase {

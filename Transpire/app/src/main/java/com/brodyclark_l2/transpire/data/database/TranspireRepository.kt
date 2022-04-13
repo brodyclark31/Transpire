@@ -4,7 +4,7 @@ import android.content.Context
 import com.brodyclark_l2.transpire.data.UserData
 import java.util.concurrent.Executors
 
-class TranspireRepository private constructor(private val userdataDao: UserDao, private val locationDao: LocationDao) {
+class TranspireRepository private constructor(private val userdataDao: UserDao, private val meetingLocationDao: MeetingLocationDao) {
     companion object {
         @Volatile private var INSTANCE: TranspireRepository? = null
         fun getInstance(context: Context): TranspireRepository {
@@ -12,7 +12,7 @@ class TranspireRepository private constructor(private val userdataDao: UserDao, 
                 var instance = INSTANCE
                 if(instance == null) {
                     val database = TranspireDatabase.getInstance(context)
-                    instance = TranspireRepository(database.userdataDao, database.locationDao)
+                    instance = TranspireRepository(database.userdataDao, database.meetingLocationDao)
                     INSTANCE = instance
                 }
                 return instance
