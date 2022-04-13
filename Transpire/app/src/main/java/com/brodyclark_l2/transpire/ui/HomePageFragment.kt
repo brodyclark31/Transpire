@@ -71,7 +71,9 @@ class HomePageFragment: Fragment() {
     fun returnBar(bars: List<Location>, age: Int): Location{
         while(true){
             var index: Int = (0..5).random()
-            if(bars[index].lowAge <= age <= bars[index].highAge)
+            if(bars[index].lowAge <= age && age <= bars[index].highAge){
+                return bars[index]
+            }
         }
     }
 }
