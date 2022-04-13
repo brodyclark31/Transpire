@@ -6,7 +6,9 @@ import androidx.room.PrimaryKey
 import java.util.*
 
 @Entity(tableName = "userdata")
-data class UserData (val firstname: String,
+data class UserData (val username: String,
+                     val password: String,
+                     val firstname: String,
                      val lastname: String,
                      val age: Int,
                      val gender: Char,
