@@ -57,6 +57,11 @@ class HomePageFragment: Fragment() {
         return binding.root
     }
 
-    val rockRestLodge = location("Rock Rest Lodge", "https://www.google.com/maps/dir//Rock+Rest+Lodge,+16005+Mt+Vernon+Rd,+Golden,+CO+80401/@39.7379778,-105.185181,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x876b84f33b931fe3:0x13783701204153c9!2m2!1d-105.179533!2d39.7338221", 21, 50,4.3)
+    val rockRestLodge = location("Rock Rest Lodge", "16005 Mt Vernon Rd, Golden, CO 80401", 21, 50,4.3)
+    val aceHigh = location("Ace-Hi Tavern", "1216 Washington Ave, Golden, CO 80401", 35, 80, 4.3)
+    val barrelsBottlesBrewery = location("Barrels & Bottles Brewery", "600 12th St #160, Golden, CO 80401", 25, 80, 4.7)
+   // val theUnderground = location
+
+
     val bars = listOf<location>()
 }
