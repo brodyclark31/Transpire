@@ -72,4 +72,6 @@ class HomePageFragment: Fragment() {
             }
         }
     }
+
+
 }
