@@ -68,8 +68,10 @@ class HomePageFragment: Fragment() {
     val minersSaloon = Location("Miners Saloon", "1109 Miner's Alley, Golden, CO 80401", 23, 70, 4.5)
     val bars = listOf<Location>(rockRestLodge, aceHigh, barrelsBottlesBrewery, theUnderground, minersSaloon)
 
-    fun returnBar(bars: List<Location>, age: Int){
-        var index: Int = Random.nextInt(from = 0, until = 5)
-        Random.nextInt
+    fun returnBar(bars: List<Location>, age: Int): Location{
+        while(true){
+            var index: Int = (0..5).random()
+            if(bars[index].lowAge <= age <= bars[index].highAge)
+        }
     }
 }
