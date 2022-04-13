@@ -6,13 +6,13 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.brodyclark_l2.transpire.data.UserData
-import com.brodyclark_l2.transpire.data.Location
+import com.brodyclark_l2.transpire.data.MeetingLocation
 
-@Database(entities = [UserData::class, Location::class], version = 1)
-@TypeConverters(UserData::class, Location::class)
+@Database(entities = [UserData::class, MeetingLocation::class], version = 1)
+@TypeConverters(UserData::class, MeetingLocation::class)
 abstract class TranspireDatabase : RoomDatabase() {
     abstract val userdataDao : UserDao
-    abstract val locationDao : LocationDao
+    abstract val meetingLocationDao : MeetingLocationDao
     companion object {
         @Volatile private var INSTANCE: TranspireDatabase? = null
         fun getInstance(context: Context): TranspireDatabase {
