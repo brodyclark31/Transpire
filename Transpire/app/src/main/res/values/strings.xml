@@ -7,6 +7,7 @@
     <string name="create_account">Create Account</string>
     <string name="new_account_form">New Account Form</string>
     <string name="username_form">Username:</string>
+    <string name="password_form">Password:</string>
     <string name="first_name">First Name:</string>
     <string name="last_name">Last Name:</string>
     <string name="age">Age:</string>
@@ -89,5 +90,7 @@
     <string name="photos_fill_text">Photos and stuff need to go here</string>
     <string name="post_photo">Post Photo</string>
     <string name="post_comment">Post Comment</string>
+
+    <string name="invalid_form_toast">Please Fill Every Entry To This Form to Create Account</string>
 
 </resources>

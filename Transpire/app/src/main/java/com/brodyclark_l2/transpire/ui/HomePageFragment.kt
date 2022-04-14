@@ -15,7 +15,7 @@ class HomePageFragment: Fragment() {
     private val binding get() = _binding!!
 
     private val barBank: MutableList<MeetingLocation> = mutableListOf()
-    private val barChoosen: MeetingLocation = returnBar()//need to put in the users age idk where we made that or how to make that
+//    private val barChoosen: MeetingLocation = returnBar()//need to put in the users age idk where we made that or how to make that
 
     init {
         barBank.add(MeetingLocation("Rock Rest Lodge", "16005 Mt Vernon Rd, Golden, CO 80401", 21, 50,4.3))
@@ -31,7 +31,7 @@ class HomePageFragment: Fragment() {
     ): View {
         _binding = HomePageBinding.inflate(inflater, container, false)
 
-        setBarTextViewModel()
+//        setBarTextViewModel()
 
         val directionsButton = binding.directionsButton
         directionsButton.setOnClickListener {
@@ -71,9 +71,9 @@ class HomePageFragment: Fragment() {
         return binding.root
     }
 
-    private fun setBarTextViewModel(){
-        binding.locationTextId.text = barChoosen.name
-    }
+//    private fun setBarTextViewModel(){
+//        binding.locationTextId.text = barChoosen.name
+//    }
     private fun returnBar(age: Int): MeetingLocation{
         while(true){
             var index: Int = (0..5).random()

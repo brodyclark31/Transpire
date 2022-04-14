@@ -10,6 +10,6 @@ class UserDataViewModel(private val transpireRepository: TranspireRepository, co
         transpireRepository.addUser(user)
     }
     fun getUser(username: String, password: String) {
-        transpireRepository.getUser(username, password)
+        return transpireRepository.getUser(username, password)
     }
 }

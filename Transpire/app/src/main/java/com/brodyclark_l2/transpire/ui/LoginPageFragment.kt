@@ -1,6 +1,7 @@
 package com.brodyclark_l2.transpire.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,10 +31,15 @@ class LoginPageFragment: Fragment() {
         _binding = LoginPageBinding.inflate(inflater, container, false)
         val loginButton = binding.loginButton
         loginButton.setOnClickListener {
-            val action = LoginPageFragmentDirections
-                .actionLoginPageToHomePageFragment()
-            view?.findNavController()
-                ?.navigate(action)
+            val username = binding.usernameText.text.toString()
+            val password = binding.passwordText.text.toString()
+
+            val userLogin = userdataViewModel.getUser(username = username, password = password)
+            Log.d("hadsfjkh", userLogin.toString())
+//            val action = LoginPageFragmentDirections
+//                .actionLoginPageToHomePageFragment()
+//            view?.findNavController()
+//                ?.navigate(action)
         }
         val createAccountButton = binding.createAccountButton
         createAccountButton.setOnClickListener {
