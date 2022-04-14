@@ -4,6 +4,8 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import com.brodyclark_l2.transpire.data.UserData
 import com.brodyclark_l2.transpire.data.database.TranspireRepository
+import import com.brodyclark_l2.transpire.data.MeetingLocation
+
 
 class UserDataViewModel(private val transpireRepository: TranspireRepository, context: Context): ViewModel() {
     fun addUser(user: UserData) {
@@ -14,6 +16,7 @@ class UserDataViewModel(private val transpireRepository: TranspireRepository, co
     }
 
     private val barBank: MutableList<MeetingLocation> = mutableListOf()
+    //private val barChoosen: MeetingLocation = returnBar()//need to put in the users age idk where we made that or how to make that
 
     init {
         barBank.add(MeetingLocation("Rock Rest Lodge", "16005 Mt Vernon Rd, Golden, CO 80401", 21, 50,4.3))
@@ -23,5 +26,17 @@ class UserDataViewModel(private val transpireRepository: TranspireRepository, co
         barBank.add(MeetingLocation("Miners Saloon", "1109 Miner's Alley, Golden, CO 80401", 23, 70, 4.5))
     }
 
+
+    private fun returnBar(age: Int): MeetingLocation{
+        while(true){
+            var index: Int = (0..5).random()
+            if(barBank[index].lowAge <= age && age <= barBank[index].highAge){
+                return barBank[index]
+            }
+        }
+    }
+
+    val returnMeetingLocation: MeetingLocation
+        get() = barChoosen
 
 }

@@ -68,14 +68,7 @@ class HomePageFragment: Fragment() {
 //    private fun setBarTextViewModel(){
 //        binding.locationTextId.text = barChoosen.name
 //    }
-    private fun returnBar(age: Int): MeetingLocation{
-        while(true){
-            var index: Int = (0..5).random()
-            if(barBank[index].lowAge <= age && age <= barBank[index].highAge){
-                return barBank[index]
-            }
-        }
-    }
+
 
 
 }
