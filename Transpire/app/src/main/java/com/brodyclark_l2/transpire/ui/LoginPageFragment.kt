@@ -34,8 +34,8 @@ class LoginPageFragment: Fragment() {
             val username = binding.usernameText.text.toString()
             val password = binding.passwordText.text.toString()
 
-            val userLogin = userdataViewModel.getUser(username = username, password = password)
-            Log.d("hadsfjkh", userLogin.toString())
+            userdataViewModel.setUserInfo(username = username, password = password)
+            Log.d("asfas", userdataViewModel.userLiveData.value.toString())
 //            val action = LoginPageFragmentDirections
 //                .actionLoginPageToHomePageFragment()
 //            view?.findNavController()
