@@ -25,7 +25,7 @@ class UberFragment: Fragment() {
 
         val factory =  ViewModelFactory(requireContext())
         userDataViewModel = ViewModelProvider(this, factory).get(UserDataViewModel::class.java)
-
+        setAddress()
         return binding.root
     }
 
