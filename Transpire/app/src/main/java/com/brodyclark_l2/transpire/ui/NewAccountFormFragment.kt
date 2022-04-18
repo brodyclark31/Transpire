@@ -1,5 +1,6 @@
 package com.brodyclark_l2.transpire.ui
 
+import android.database.sqlite.SQLiteConstraintException
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -14,6 +15,7 @@ import com.brodyclark_l2.transpire.data.UserData
 import com.brodyclark_l2.transpire.databinding.NewAccountFormBinding
 import com.brodyclark_l2.transpire.viewmodels.UserDataViewModel
 import com.brodyclark_l2.transpire.viewmodels.ViewModelFactory
+import java.lang.Exception
 import java.lang.Integer.parseInt
 
 
@@ -53,9 +55,20 @@ class NewAccountFormFragment: Fragment() {
             }
             var userData = UserData( username= username, firstname = firstname, lastname = lastname, password = password,
                                     age = parseInt(age), gender = gender, city = city, state = state, travelWillingness = parseInt(travelDistance) )
-            userdataViewModel.addUser(userData)
+//            try {
+//                userdataViewModel.addUser(userData)
+//            } catch (error: SQLiteConstraintException) {
+//                Toast.makeText(requireContext(), R.string.invalid_username_toast, Toast.LENGTH_SHORT).show()
+//                return@setOnClickListener
+//            }
+//            userdataViewModel.removeUser(userData)
+            val v = userdataViewModel.addUser(userData)
+            if (v < 0) {
+                Toast.makeText(requireContext(), R.string.invalid_username_toast, Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             val action = NewAccountFormFragmentDirections
-                .actionNewAccountFormFragmentToHomePageFragment()
+                .actionNewAccountFormFragmentToLoginPage()
             view?.findNavController()
                 ?.navigate(action)
         }

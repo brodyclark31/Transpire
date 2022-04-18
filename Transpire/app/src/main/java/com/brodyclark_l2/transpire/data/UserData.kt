@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.util.*
 
-@Entity(tableName = "userdata")
+@Entity(tableName = "userdata", primaryKeys = ["username"])
 data class UserData (
     var username: String,
     val password: String,
@@ -16,6 +16,6 @@ data class UserData (
     val city: String,
     val state: String,
     val travelWillingness: Int,
-    @PrimaryKey val id: UUID = UUID.randomUUID()) : Serializable {
+    val id: UUID = UUID.randomUUID()) : Serializable {
 
                      }

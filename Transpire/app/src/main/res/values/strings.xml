@@ -92,5 +92,6 @@
     <string name="post_comment">Post Comment</string>
 
     <string name="invalid_form_toast">Please Fill Every Entry To This Form to Create Account</string>
+    <string name="invalid_username_toast">Username Taken. Try using a different username.</string>
 
 </resources>

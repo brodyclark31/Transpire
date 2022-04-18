@@ -3,6 +3,7 @@ package com.brodyclark_l2.transpire.viewmodels
 import android.content.Context
 import android.util.Log
 import androidx.core.content.PackageManagerCompat.LOG_TAG
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.brodyclark_l2.transpire.data.MeetingLocation
 import com.brodyclark_l2.transpire.data.UserData
@@ -31,16 +32,17 @@ class UserDataViewModel(private val transpireRepository: TranspireRepository, co
 
     private val barChoosen: MeetingLocation = returnBar()//need to put in the users age idk where we made
 
-    fun addUser(user: UserData) {
-        transpireRepository.addUser(user)
+    fun addUser(user: UserData): Long {
+        return transpireRepository.addUser(user)
+    }
+
+    fun removeUser(user: UserData) {
+        transpireRepository.removeUser(user)
     }
 
     fun setUserInfo(username: String, password: String) {
         usernameGlobal = username
         passwordGlobal = password
-//        val user = transpireRepository.getUser(username, password)
-//        Log.d("agasf", user.toString())
-//        return transpireRepository.getUser(username, password)
     }
     private fun returnBar(age: Int): MeetingLocation{
         Log.d(LOG_TAG, "Entered returnBar")
@@ -60,5 +62,8 @@ class UserDataViewModel(private val transpireRepository: TranspireRepository, co
 
     val returnMeetingLocation: MeetingLocation
         get() = barChoosen
+
+    val userLoginInfo: LiveData<UserData>
+        get() = userLiveData
 
 }

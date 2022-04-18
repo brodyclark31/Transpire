@@ -1,20 +1,20 @@
 package com.brodyclark_l2.transpire.data.database
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 import com.brodyclark_l2.transpire.data.UserData
 
 @Dao
 interface UserDao {
-    @Insert
-    fun addUser(user: UserData)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    fun addUser(user: UserData): Long
 
     @Update
     fun updateUser(user: UserData)
 
     @Query("SELECT * FROM userdata WHERE username=(:username) and password=(:password)")
     fun getUser(username: String, password: String): LiveData<UserData>
+
+    @Query("DELETE FROM userdata")
+    fun removeUser()
 }

@@ -41,8 +41,8 @@
         android:name="com.brodyclark_l2.transpire.ui.NewAccountFormFragment"
         android:label="NewAccountFormFragment" >
         <action
-            android:id="@+id/action_newAccountFormFragment_to_homePageFragment"
-            app:destination="@id/homePageFragment" />
+            android:id="@+id/action_newAccountFormFragment_to_loginPage"
+            app:destination="@id/loginPage" />
     </fragment>
     <fragment
         android:id="@+id/mapsFragment"
