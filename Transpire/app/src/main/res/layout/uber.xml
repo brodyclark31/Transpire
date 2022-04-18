@@ -9,5 +9,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
         android:textSize="24sp"
+        android:layout_weight="0.1"
         android:text="@string/uber"/>
+
+    <TextView
+        android:id="@+id/address_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.9"
+        android:textSize="24sp"
+        android:text="@string/address"/>
 </LinearLayout>
