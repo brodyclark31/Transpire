@@ -40,9 +40,11 @@ class UserDataViewModel(private val transpireRepository: TranspireRepository, co
         transpireRepository.removeUser(user)
     }
 
+
     fun setUserInfo(username: String, password: String) {
         usernameGlobal = username
         passwordGlobal = password
+        Log.d("hi", transpireRepository.getUser("jarodclark", "jarodclark").value.toString())
     }
     private fun returnBar(age: Int): MeetingLocation{
         Log.d(LOG_TAG, "Entered returnBar")
@@ -63,7 +65,7 @@ class UserDataViewModel(private val transpireRepository: TranspireRepository, co
     val returnMeetingLocation: MeetingLocation
         get() = barChoosen
 
-    val userLoginInfo: LiveData<UserData>
+    val userLoginInfo: LiveData<UserData>?
         get() = userLiveData
 
 }
