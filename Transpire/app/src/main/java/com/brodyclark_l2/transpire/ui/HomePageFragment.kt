@@ -5,18 +5,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.brodyclark_l2.transpire.data.MeetingLocation
 import com.brodyclark_l2.transpire.databinding.HomePageBinding
+import com.brodyclark_l2.transpire.viewmodels.UserDataViewModel
+import com.brodyclark_l2.transpire.viewmodels.ViewModelFactory
 
 class HomePageFragment: Fragment() {
 
+    private lateinit var userDataViewModel: UserDataViewModel
+
     private var _binding: HomePageBinding? = null
     private val binding get() = _binding!!
+    private lateinit var barChoosen: MeetingLocation
 
-//    val factory =  ViewModelFactory(requireContext())
-//    userdataViewModel = ViewModelProvider(this, factory).get(UserDataViewModel::class.java)
-//    private val barChoosen: MeetingLocation = returnBar()//need to put in the users age idk where we made that or how to make that
 
 
     override fun onCreateView(
@@ -25,7 +28,13 @@ class HomePageFragment: Fragment() {
     ): View {
         _binding = HomePageBinding.inflate(inflater, container, false)
 
-//        setBarTextViewModel()
+        val factory =  ViewModelFactory(requireContext())
+
+        userDataViewModel = ViewModelProvider(this, factory).get(UserDataViewModel::class.java)
+
+        barChoosen = userDataViewModel.returnMeetingLocation //need to put in the users age idk where we made that or how to make that
+
+        setBarTextViewModel()
 
         val directionsButton = binding.directionsButton
         directionsButton.setOnClickListener {
@@ -65,9 +74,9 @@ class HomePageFragment: Fragment() {
         return binding.root
     }
 
-//    private fun setBarTextViewModel(){
-//        binding.locationTextId.text = barChoosen.name
-//    }
+    private fun setBarTextViewModel(){
+        binding.locationTextId.text = barChoosen.name
+    }
 
 
 
