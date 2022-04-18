@@ -29,7 +29,6 @@ class HomePageFragment: Fragment() {
         _binding = HomePageBinding.inflate(inflater, container, false)
 
         val factory =  ViewModelFactory(requireContext())
-
         userDataViewModel = ViewModelProvider(this, factory).get(UserDataViewModel::class.java)
 
         barChoosen = userDataViewModel.returnMeetingLocation //need to put in the users age idk where we made that or how to make that

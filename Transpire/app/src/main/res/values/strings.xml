@@ -73,8 +73,9 @@
         <item>Wyoming</item>
     </string-array>
 
-    <string name="uber">Uber</string>
+    <string name="uber">Address</string>
     <string name="map">Maps</string>
+    <string name="address">Place Holder</string>
 
     <string name="home_page">Home Page</string>
     <string name="location">{Location}</string>
