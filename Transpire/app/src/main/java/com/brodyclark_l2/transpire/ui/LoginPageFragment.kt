@@ -36,10 +36,10 @@ class LoginPageFragment: Fragment() {
 
             userdataViewModel.setUserInfo(username = username, password = password)
             Log.d("asfas", userdataViewModel.userLiveData.value.toString())
-//            val action = LoginPageFragmentDirections
-//                .actionLoginPageToHomePageFragment()
-//            view?.findNavController()
-//                ?.navigate(action)
+            val action = LoginPageFragmentDirections
+                .actionLoginPageToHomePageFragment()
+            view?.findNavController()
+                ?.navigate(action)
         }
         val createAccountButton = binding.createAccountButton
         createAccountButton.setOnClickListener {
