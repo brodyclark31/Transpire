@@ -80,7 +80,7 @@
     <string name="home_page">Home Page</string>
     <string name="location">{Location}</string>
     <string name="direction">Directions</string>
-    <string name="rides">Rides</string>
+    <string name="rides">Address</string>
     <string name="location_info">Location Info</string>
     <string name="yes">Y</string>
     <string name="no">N</string>
