@@ -36,7 +36,7 @@ class LoginPageFragment: Fragment() {
 //            context?.deleteDatabase("transpire-database");
 
             userdataViewModel.setUserInfo(username = username, password = password)
-            Log.d("asfas", userdataViewModel.userLiveData.value.toString())
+            Log.d("asfas", userdataViewModel.userLoginInfo?.value.toString())
 //            val action = LoginPageFragmentDirections
 //                .actionLoginPageToHomePageFragment()
 //            view?.findNavController()

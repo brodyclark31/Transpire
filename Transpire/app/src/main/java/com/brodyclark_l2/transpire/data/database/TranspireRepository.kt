@@ -24,9 +24,11 @@ class TranspireRepository private constructor(private val userdataDao: UserDao, 
             }
         }
     }
-    private val executor = Executors.newSingleThreadExecutor()
+    private var executor = Executors.newSingleThreadExecutor()
+
 
     fun addUser(user: UserData): Long {
+        executor = Executors.newSingleThreadExecutor()
         var returnValue: Long = 0
         executor.execute {
             returnValue = userdataDao.addUser(user)
